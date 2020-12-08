@@ -49,6 +49,7 @@ function setLightState(patternItem) {
     patternItem.state.green,
     document.getElementsByClassName("green")
   );
+  ``;
 }
 
 function sleep(delay) {
@@ -66,11 +67,10 @@ function runPattern(patternSlug) {
   //   // do once
   // }
   curPattern.pattern.forEach((item, index) => {
-    let timeout;
+    let timeout = item.duration;
+
     if (index === 0) {
       timeout = 0;
-    } else {
-      timeout = item.duration;
     }
 
     setTimeout(() => {
