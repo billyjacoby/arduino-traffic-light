@@ -1,0 +1,10 @@
+{
+  "isRelayOneOn": true,
+  "isRelayTwoOn": false,
+  "isRelayThreeOn": false,
+  "patternIsComplete": false,
+  "trafficLightPatternRunning": true,
+  "redLightDuration": 6000,
+  "yellowLightDuration": 3000,
+  "greenLightDuration": 5000
+}

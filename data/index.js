@@ -99,3 +99,26 @@ function startPattern() {
 function stopPattern() {
   requestData("/pattern/stop");
 }
+
+function saveState() {
+  requestData("/save-state");
+}
+
+function updatePatternDurations(event) {
+  event.preventDefault();
+  let redLightDuration = event.target.redLightDuration.value * 1000;
+  let yellowLightDuration = event.target.yellowLightDuration.value * 1000;
+  let greenLightDuration = event.target.greenLightDuration.value * 1000;
+
+  let url = `/update?${
+    "redLightDuration=" +
+    redLightDuration +
+    "&" +
+    "yellowLightDuration=" +
+    yellowLightDuration +
+    "&" +
+    "greenLightDuration=" +
+    greenLightDuration
+  }`;
+  requestData(url);
+}

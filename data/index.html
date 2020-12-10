@@ -18,6 +18,7 @@
     <h1>Jake's Traffic Light</h1>
     <p>Power Status: <strong> ON</strong></p>  
     <button onclick="startPattern()" class="start">Start</button><button onclick="stopPattern()" class="stop">Stop</button>
+    <button class="save-state" onclick="saveState()">Save State</button>
   </div>
 
   <div class="lights">
@@ -29,6 +30,28 @@
     </div><div class="light green" onClick="toggleLight(this, 'green')">
       GREEN
     </div>
+  </div>
+
+  <div class="duration-updating">
+    <form onsubmit="updatePatternDurations(event)">
+      <p class="form-group">
+        <label>Red Light Duration: </label><br />
+        <input type="number" name="redLightDuration" value="%curRedLightDuration%" />
+        <small>seconds</small>
+      </p>
+      <p class="form-group">
+        <label>Yellow Light Duration: </label> <br/>
+        <input type="number" name="yellowLightDuration" value="%curYellowLightDuration%" />
+        <small>seconds</small>
+      </p>
+      <p class="form-group">
+        <label>Green Light Duration: </label><br />
+        <input type="number" name="greenLightDuration" value="%curGreenLightDuration%" />
+        <small>seconds</small>
+      </p>
+      
+      <button type="submit">Submit</button>
+    </form>
   </div>
   
   
